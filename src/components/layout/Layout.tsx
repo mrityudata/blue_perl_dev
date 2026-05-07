@@ -42,18 +42,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <X size={24} />
           </button>
         </div>
-        
+
         <nav className="flex-1 px-6 space-y-2 mt-4">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
               onClick={() => setIsMenuOpen(false)}
-              className={`w-full flex items-center px-4 py-4 text-[11px] font-mono tracking-widest transition-all rounded-md group ${
-                location.pathname === item.path 
-                  ? "text-white bg-[#1e293b]" 
+              className={`w-full flex items-center px-4 py-4 text-[11px] font-mono tracking-widest transition-all rounded-md group ${location.pathname === item.path
+                  ? "text-white bg-[#1e293b]"
                   : "text-[#64748b] hover:text-white hover:bg-[#1e293b]/50"
-              }`}
+                }`}
             >
               <span className={`mr-4 text-[9px] opacity-40 group-hover:opacity-100 transition-opacity`}>{item.index}</span>
               {item.label}
@@ -86,7 +85,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <span className="text-[10px] font-mono text-[#64748b] uppercase">STATE: {currentItem.label}</span>
             </div>
           </div>
-          <Link 
+          <Link
             to="/contact"
             className="px-4 lg:px-6 py-2 bg-blue-600 hover:bg-blue-500 text-white text-[10px] font-mono font-black rounded shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all uppercase tracking-widest"
           >
@@ -110,11 +109,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <span className="w-2 h-2 bg-blue-500/20 rounded-full hidden sm:inline"></span>
           </div>
           <div className="flex space-x-4 lg:space-x-8 shrink-0">
-            {["GITHUB", "LINKEDIN"].map(social => (
-              <span key={social} className="text-[9px] font-mono text-[#475569] hover:text-white cursor-pointer transition-colors tracking-widest font-bold">
-                {social}
-              </span>
-            ))}
+            <a href="https://github.com/mrityudata" target="_blank" rel="noopener noreferrer" className="text-[9px] font-mono text-[#475569] hover:text-white cursor-pointer transition-colors tracking-widest font-bold">
+              GITHUB
+            </a>
+            <a href="https://www.linkedin.com/in/amit-chauhan-87939b203?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-[9px] font-mono text-[#475569] hover:text-white cursor-pointer transition-colors tracking-widest font-bold">
+              LINKEDIN
+            </a>
           </div>
         </footer>
       </main>

@@ -23,9 +23,15 @@ const Contact: React.FC = () => {
           <div className="p-6 border border-[#1e293b] rounded-2xl space-y-4">
             <p className="text-[10px] font-mono text-[#64748b] uppercase tracking-widest font-bold">Social_Sync</p>
             <div className="flex gap-6">
-              <Github size={20} className="text-slate-400 hover:text-white cursor-pointer" />
-              <Linkedin size={20} className="text-slate-400 hover:text-white cursor-pointer" />
-              <Mail size={20} className="text-slate-400 hover:text-white cursor-pointer" />
+              <a href="https://github.com/mrityudata" target="_blank" rel="noopener noreferrer">
+                <Github size={20} className="text-slate-400 hover:text-white cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/in/amit-chauhan-87939b203?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+                <Linkedin size={20} className="text-slate-400 hover:text-white cursor-pointer" />
+              </a>
+              <a href="mailto:your-email@example.com">
+                <Mail size={20} className="text-slate-400 hover:text-white cursor-pointer" />
+              </a>
             </div>
           </div>
         </div>
