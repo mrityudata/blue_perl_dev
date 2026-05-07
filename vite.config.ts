@@ -5,8 +5,13 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
+  
+  // Only use the subpath base in production (GitHub Pages)
+  const isProd = mode === 'production';
+  const base = isProd ? '/blue_perl_dev/' : '/';
+
   return {
-    base: '/blue_perl_dev/',
+    base: base,
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
