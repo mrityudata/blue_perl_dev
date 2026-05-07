@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { fetchProjects, fetchTestimonials, Project, Testimonial } from "./services/api";
 import Layout from "./components/layout/Layout";
@@ -36,6 +36,8 @@ function AnimatedRoutes({ projects, testimonials, isLoading }: {
           <Route path="/case-studies" element={<CaseStudies projects={projects} />} />
           <Route path="/testimonials" element={<Testimonials testimonials={testimonials} />} />
           <Route path="/contact" element={<Contact />} />
+          {/* Catch-all route to redirect to home if path doesn't match */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
@@ -65,8 +67,11 @@ export default function App() {
     loadData();
   }, []);
 
+  // Use the base URL from Vite config as the basename for the router
+  const basename = import.meta.env.BASE_URL;
+
   return (
-    <Router>
+    <Router basename={basename}>
       <Layout>
         <AnimatedRoutes
           projects={projects}
@@ -77,4 +82,3 @@ export default function App() {
     </Router>
   );
 }
-
