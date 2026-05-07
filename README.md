@@ -1,14 +1,13 @@
 # Developer Portfolio
 
-Professional engineering portfolio showcasing expertise in high-performance mobile architectures, custom rendering engines, and modular state management.
+Professional engineering portfolio showcasing expertise in high-performance mobile architectures and modular state management.
 
 ## Tech Stack
 
-- **Frontend:** Flutter & Dart (Skia, BLoC, Riverpod)
-- **Backend:** Node.js (MVC), Express
+- **Frontend:** React, Vite, Tailwind CSS, Motion
+- **Backend:** Node.js, Express, tsx
 - **Database:** MongoDB
 - **Architecture:** MVC, Clean Architecture
-- **UI/UX:** Tailwind CSS, Framer Motion (for this web hub)
 
 ## Project Overview
 
@@ -18,6 +17,24 @@ This repository contains the source code for my professional portfolio, built as
 - **Detailed Case Studies**
 - **Client Testimonials**
 - **Tech-forward Industrial Design UI**
+
+## Getting Started
+
+To run both the frontend and backend together, follow these steps:
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Run the project:**
+   ```bash
+   npm run dev
+   ```
+
+The application will be available at:
+- **Frontend:** `http://localhost:5173`
+- **Backend API:** `http://localhost:3000`
 
 ## Version
 
